@@ -13,7 +13,7 @@ body,html{
 
 
 
- .container, .p__img1, .p__img2, .p__img3{
+ .container__home, .p__img--first, .p__img--second, .p__img--third{
     position:relative;
     background-position:center;
     background-size:cover;
@@ -25,23 +25,44 @@ body,html{
     
 }
 
-.p__img1{
+.p__img--first{
     background-image: url("../img/img2.jpg");
     min-height:400px;
 }
 
-.p__img2{
+.p__img--second{
     background-image: url("../img/img3.jpg");
     min-height:400px;
 }
 
-.p__img3{
+.p__img--third{
     background-image: url("../img/img1.jpg");
     min-height:400px;
 }
 
+.p__text{
+    position: absolute;
+    top:45%;
+    width:100%;
+    text-align:center;
+    font-size:2rem;
+    letter-spacing:0.85rem;
+    text-transform:uppercase;  
+}
+
+
+
 .section{
-    text-align: justify;
+
+    margin:0;
+    padding:0;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+}
+
+.section__ptf{
+
     display:flex;
     flex-direction: column;
 }
@@ -93,32 +114,24 @@ body,html{
 
 
 
-.p__text{
-    position: absolute;
-    top:45%;
-    width:100%;
-    text-align:center;
-    font-size:2rem;
-    letter-spacing:0.85rem;
-    text-transform:uppercase;
-}
+
 
 /* MENU */
-.container{
+.container__home {
     max-width: 960px;
     margin:auto;
     overflow:hidden;
     padding:0.3rem;
 }
 
-.showcase{
+.showcase__home{
     color:black;
     height:100vh;
     position: relative;
 
 }
 
-.showcase:before{
+.showcase__home:before{
     content:'';
     background:url("../img/img1.jpg") no-repeat center center/cover;
     position:absolute;
@@ -130,7 +143,7 @@ body,html{
     background-attachment: fixed;
 }
 
-.showcase .showcase-inner{
+.showcase__home .showcase--inner{
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -146,18 +159,18 @@ body,html{
 
 }
 
-.title-1{
+.home__title--year{
     font-size: 1rem;
     text-transform:uppercase; 
 }
 
-.title-2{
+.home__title--name{
     font-size:0.50rem;
     text-transform:uppercase;
-    text
+    
 }
 
-.title-3{
+.home__title--location{
     font-size:0.60rem;
     text-transform:uppercase;
 }
@@ -165,11 +178,7 @@ body,html{
 
 .btn{
     display:inline-block;
-    border:0.1rem solid #ffffff;
-    border-color: #000000;
-    background-color:none;
-    color:#000000;
-    padding: 0.5rem;
+    padding:0.5rem 1.5rem 0.5rem 1.5rem ;
     margin-top:1rem;
     text-decoration:none;
     text-transform: uppercase;
@@ -177,34 +186,48 @@ body,html{
     transition: opacity 1s ease-in;
 }
 
-.btn:hover{
+.btn--dark{    
+    border:0.1rem solid #ffffff;
+    border-color: #000000;
+    background-color:none;
+    color:#000000;}
+
+.btn--dark:hover{
     opacity:0.45;
     background-color: #000000;
     color:#ffffff;
 }
 /* FIN MENU */
 
+/* APROPOS & INSPIRATION */
 
-
-
-/* A PROPOS */
-
-
+.container__about{
+   
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
 .section__text{
-    margin:0rem 3rem 2rem 2rem;
-     
-}
-.section__img{
-    margin:0;
-    width:320px;
-    height:350px;   
-}
-.section__text--inspiration{
-    margin:0rem 3rem 2rem 2rem;
+    width:60%;
+    height: auto;
+    margin:auto;
+    padding:0rem 2rem 1rem 2rem;
+    text-align: justify;
      
 }
 
-/* FIN A PROPOS */
+.section__img--right img{
+    width:290px;
+    height:370px;  
+}
+
+.section__img--left img{
+    margin:0;
+    padding:0;
+    width:320px;
+    height:358px;  
+}
+/* FIN A PROPOS & INSPIRATION*/
 
 /* PORTFOLIO */
 
@@ -213,10 +236,8 @@ body,html{
     display:flex;
     flex-flow:row wrap;
     justify-content: center;
-    margin-bottom:1rem;
-    
+    margin-bottom:1rem;  
 }
-
 .container__ptf div{
     margin:0.2rem;
     display:-ms-flexbox;
@@ -225,35 +246,33 @@ body,html{
      -webkit-flex-flow:row wrap;
     flex-flow:row wrap;
     display:-webkit-box;
-    display:flex;
-   
+    display:flex; 
 }
 .container__ptf div img{
     width:100px;
     height:auto;
 }
+.footer--dark{
+   
+    background-color: #000000;
+    height:70px;
+    display:flex;
+  
+}
 .btn--light{
-    display:inline-block;
-    border:0.1rem solid #ffffff;
     background-color:none;
     color:#ffffff;
-    padding:0.50rem 1.5rem;
-    margin-top:1rem;
-    text-decoration:none;
-    text-transform: uppercase;
-    font-size:0.95rem;
-    transition: opacity 1s ease-in;
+    border:0.1rem solid #ffffff;
+    margin:auto;  
 }
 
 
 /* CONTACT */
 
-.section__contact{
-    box-sizing:border-box;
-}
+
 
 .container__contact{
-  max-width:1150px;
+    max-width:1150px;
     margin-left:auto;
     margin-right:auto;
     padding:1rem;
@@ -261,10 +280,7 @@ body,html{
 .logo__contact{
     width:160px;
     height:160px;
-   
-
 }
-
 h3{
     font-size:1rem;
     text-transform: uppercase;
@@ -275,18 +291,18 @@ ul{
     padding:0;
 }
 
-.wrapper{
+.wrapper__contact{
     margin-top:20px;
     margin-bottom:20px;
     border:1px solid #ffffff;
     box-shadow:0 0 5px 0 grey;
 
 }
-.wrapper >*{
-    padding:3em
+.wrapper__contact >*{
+    padding:1rem
 }
 
-.box__info{
+.box--info{
     display:flex;
     flex-direction:column;
     justify-items: center;
@@ -296,45 +312,53 @@ ul{
 
 }
 
-.box__info h3, .box__info ul{
+.box--info h3, .box--info ul{
     text-align:center;
     margin:2rem 0 2rem 0;
 }
 
-/* form styles */
+/* style form */
 
-.box__contact form{
+.box--contact form{
     display:grid;
     grid-template-columns:1fr 1fr;
     grid-gap:20px;
 }
 
-.box__contact form label{
+.box--contact form label{
     display:block;
 }
 
-.box__contact form p{
-    margin:1rem;
+.box--contact form p{
+    margin:1rem 1.5rem 1rem 0rem;
+    padding
 }
 
-.box__contact form .label__full{
-    grid-column:1/ 3;
+.box--contact .label--full{
+    grid-column:1/3;
 }
 
-.box__contact form button,.box__contact form input, .box__contact form textarea{
+.box--contact form button, .box--contact form textarea{
     width:100%;
+    padding:0.50rem;
+    
+}
+
+.box--contact form input
+{
+    width:93%;
     padding:0.30rem;
     
 }
 
-.box__contact button{
+.box--contact button{
     background:#000000;
-    border:1 solid #ffffff;
+    border:0.1rem solid #ffffff;
     text-transform:uppercase;
     color:#ffffff;
 }
 
-.box__contact form button:hover, .box__contact form button:focus{
+.box--contact button:hover, .box--contact  button:focus{
  background:#ffffff;
  color:#000000;
  outline:0;
@@ -352,9 +376,15 @@ ul{
 /* RESPONSIVE */
 
 
-@media (min-width:900px){
-    .container, .p__img1, .p__img2, .p__img3{
+@media (min-width:800px){
+    .container__home , .p__img--first, .p__img--second, .p__img--third{
         background-attachment: fixed;
+    }
+    .home__title--name{
+        font-size:1rem;
+    }
+    .home__title--location{
+        font-size:0.85rem; 
     }
 }
 
@@ -391,19 +421,40 @@ ul{
     /* apropos */
     @media (min-width:400px){
     .container__about{
+        width:100%;
         display:flex;
         flex-direction:row-reverse;   
     }
     .section__text{
-    padding-top:3rem;
+    padding-top:1rem;
     width:50%;
     font-size:1rem;
     text-align: justify;
  }
-.section__img img{
-width:100%      
+    .section__img img{
+       
     }
 }
+
+@media (min-width:900px){
+    .container__about{
+        margin:0;
+        width:100%;
+        display:flex;
+        flex-direction:row-reverse;   
+    }
+    .section__text{
+    padding-top:1rem;
+    width:50%;
+    font-size:1rem;
+    text-align: justify;
+ }
+    .section__img img{
+    width:100%      
+    }
+}
+
+
 /* inspiration */
 @media (min-width:400px){
     .section__text--inspiration{
@@ -422,12 +473,22 @@ width:100%
 
 /* contact */
 @media (min-width:700px){
-    .wrapper{
+    .wrapper__contact{
         display:grid;
         grid-template-columns:1fr 2fr;
     }
     .logo__contact{
         margin-left:15px;
-    
     }
+
+    .box--info h3{
+       margin-top:1rem;
+    }
+
+    .box--contact form input
+{
+    width:95%;
+    padding:0.30rem;
+    
+}
 }
