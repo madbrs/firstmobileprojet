@@ -11,6 +11,8 @@ body,html{
     scrollbar-color: #000000;
 }
 
+/* PARALLAX */
+
  .home__container, .p__img--first, .p__img--second, .p__img--third{
     position:relative;
     background-position:center;
@@ -45,6 +47,7 @@ body,html{
     text-transform:uppercase;  
 }
 
+/* SECTION*/
 
 .section{
     margin:0;
@@ -90,7 +93,7 @@ body,html{
     padding-left:1rem;
 }
 
-/* MENU */
+/* HOME-MENU */
 
 .home__container {
     max-width: 960px;
@@ -162,7 +165,7 @@ body,html{
     color:#ffffff;
     opacity:0.85;
 }
-/* FIN MENU */
+/* END HOME-MENU */
 
 
 /* APROPOS & INSPIRATION */
@@ -179,21 +182,14 @@ body,html{
     text-align: justify;
     font-size:0.86rem;     
 }
-
-.about__img--right img{
+.about__img img{
     margin:0;
     padding:0;
     width:320px;
     height:358px;  
 }
+/*END APROPOS & INSPIRATION */
 
-.about__img--left img{
-    margin:0;
-    padding:0;
-    width:320px;
-    height:358px;  
-}
-/* FIN A PROPOS & INSPIRATION*/
 
 /* PORTFOLIO */
 
@@ -238,6 +234,7 @@ body,html{
     color:#000000;
     opacity:0.40;
 }
+/* END PORTFOLIO */
 
 /* CONTACT */
 
@@ -332,9 +329,14 @@ ul{
  outline:0;
  transition:background-color 2s ease-out;
 }
+/* END CONTACT */
 
 
-/* RESPONSIVE */
+
+
+/* RESPONSIVE TABLET & DESKTOP*/
+
+/* PORTFOLIO */
 
 @media screen and (min-width:400px){
 
@@ -362,7 +364,7 @@ ul{
     }
 
 }
-
+/* ABOUT */
 @media (min-width:356px){
     .about__container{
         width:100%;
@@ -380,7 +382,7 @@ ul{
 }
 
 
-
+/* PARALLAX EFFECT START */
 @media (min-width:800px){
     .home__container , .p__img--first, .p__img--second, .p__img--third{
         background-attachment: fixed;
@@ -394,8 +396,8 @@ ul{
 }
 
 
-/* contact */
-@media (min-width:700px){
+/* CONTACT */
+@media (min-width:800px){
     .contact__wrapper{
         display:grid;
         grid-template-columns:1fr 2fr;
@@ -408,11 +410,27 @@ ul{
        margin-top:1rem;
     }
 
-    .contact__box--email form input
-{
+    .contact__box--email form input{
     width:95%;
-    padding:0.30rem;
-    
+    padding:0.30rem;   
+    }
+}
+
+/* ABOUT DESKTOP */
+@media (min-width:800px){
+.about__container{
+    width:100%;
+    display:flex;
+    flex-direction:column;   
+}
+.section__text{
+padding-top:1rem;
+font-size:1rem;
+text-align: justify;
+}
+.about__img--right{  
+display:flex;
+justify-content: flex-end;        
 }
 }
 
@@ -425,12 +443,12 @@ ul{
     }
     .section__text{
     padding-top:1rem;
-    width:40%;
+    width:35%;
     font-size:1.2rem;
     text-align: justify;
  }
- .home__logo{
+    .home__logo{
     width:200px;
     height:200px;
-}
+    }
 }
