@@ -1,11 +1,11 @@
-.wrapper__menu{
+.menu__wrapper{
     position:fixed;
     top:0;
     left:0;
     z-index:1;
 }
 
-.wrapper__menu .switch{
+.menu__wrapper .menu__switch{
     position:absolute;
     top:0;
     left:0;
@@ -17,7 +17,7 @@
 
 }
 
-.wrapper__menu .hamburger{
+.menu__wrapper .menu__burger{
     position:absolute;
     top:0;
     left:0;
@@ -32,9 +32,9 @@
 
 }
 
-/* hamburger line */
+/* burger line */
 
-.wrapper__menu .hamburger > div {
+.menu__wrapper .menu__burger > div {
     position: relative;
     width:100%;
     height:1px;
@@ -46,8 +46,8 @@
 
 }
 /* top and bottom line */
-.wrapper__menu .hamburger > div:before,
-.wrapper__menu .hamburger > div:after{
+.menu__wrapper .menu__burger > div:before,
+.menu__wrapper .menu__burger > div:after{
     content:'';
     position:absolute;
     z-index:1;
@@ -57,49 +57,49 @@
     background:inherit;
 }
 /* move lign down */
-.wrapper__menu .hamburger > div:after{
+.menu__wrapper .menu__burger > div:after{
     top:10px;
 }
 
 /* switch animation */
 
-.wrapper__menu .switch:checked + .hamburger > div{
+.menu__wrapper .menu__switch:checked + .menu__burger > div{
 transform:rotate(135deg);
 }
 
-.wrapper__menu .switch:checked + .hamburger > div:before,
-.wrapper__menu .switch:checked + .hamburger > div:after{
+.menu__wrapper.menu__switch:checked + .menu__burger > div:before,
+.menu__wrapper .menu__switch:checked + .menu__burger > div:after{
     top:0;
     transform:rotate(90deg);
     }
 
 /* turn when click on hover */
 
-    .wrapper__menu .switch:checked:hover + .hamburger > div{
+    .menu__wrapper .menu__switch:checked:hover + .menu__burger > div{
         transform:rotate(225deg);
     }
 
  /* show menu */
-.wrapper__menu .switch:checked ~ .menu{
+.menu__wrapper .menu__switch:checked ~ .menu__list{
         visibility:visible; 
     }
 
 
 /* transition-duration pour changer la vitesse */
-.wrapper__menu .switch:checked ~ .menu > div{
+.menu__wrapper .menu__switch:checked ~ .menu__list> div{
         transform:scale(1);
         transition-duration:1s;
     }
 
 
-.wrapper__menu .switch:checked ~ .menu > div >div{
+.menu__wrapper .menu__switch:checked ~ .menu__list > div >div{
     opacity:1;
     transition:opacity 0.4s ease;
 }
 
 
 
-.wrapper__menu .menu{
+.menu__wrapper .menu__list{
     position:fixed;
     top:0;
     left:0;
@@ -112,7 +112,7 @@ transform:rotate(135deg);
     justify-content:center;
 }
 
-.wrapper__menu .menu > div {
+.menu__wrapper .menu__list > div {
     background:#000000;
     border-radius:50%;
     width:150vw;
@@ -125,7 +125,7 @@ transform:rotate(135deg);
     transition:all 0.4s ease;
 }
 
-.wrapper__menu .menu > div > div {
+.menu__wrapper .menu__list > div > div {
 text-align:center;
 max-width:90vw;
 max-height:100vh;
@@ -133,7 +133,7 @@ opacity:0;
 transition:opacity 0.4s ease;
 }
 
-.wrapper__menu .menu > div > div >ul >li{
+.menu__wrapper .menu__list > div > div >ul >li{
     list-style:none;
     color:#ffffff;
     font-size:1rem;
@@ -141,7 +141,7 @@ transition:opacity 0.4s ease;
     padding:0.75rem;
     text-transform: uppercase;
 }
-.wrapper__menu .menu > div > div >ul >li >a{
+.menu__wrapper .menu__list > div > div >ul >li >a{
     color:inherit;
     text-decoration:none;
     transition:color 0.4s ease;

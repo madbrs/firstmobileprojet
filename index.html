@@ -11,15 +11,15 @@
 </head>
 <body>
 <!-- HOME -->
-        <div class="wrapper__menu">
-                <input type="checkbox" class="switch">
-                <div class="hamburger">
+        <div class="menu__wrapper">
+                <input type="checkbox" class="menu__switch">
+                <div class="menu__burger">
                     <div></div></div>
-                <div class="menu">
+                <div class="menu__list">
     <div>   
 <div>   
                 <ul>
-                    <li><a  href="#accueil" class="close">accueil </a></li>
+                    <li><a  href="#accueil">accueil </a></li>
                     <li><a  href="#apropos">a propos</a></li>
                     <li><a  href="#portfolio">portfolio</a></li>
                     <li><a  href="#inspiration">inspiration</a></li>
@@ -31,9 +31,9 @@
         </div>
        
     </div>
-    <header class="showcase__home">
-        <div class="container__home showcase--inner">
-            <img class="logo"src="img/logo1.png">
+    <header class="home__showcase">
+        <div class="home__container home-showcase--inner">
+            <img class="home__logo"src="img/logo1.png">
           <div class="home__title--year"><h5>| since 1985 |</h5></div>
           <div class="home__title--name"><h1>guillaume lemoing</h1></div>
           <div class="home__title--location"><h2>artiste | lille</h2></div>
@@ -49,9 +49,11 @@
         <h2>A propos</h2>   
 </div>
 <section class="section section--light">
-    <div class="container__about">
+    <div class="about__container">
 
-        <img class="section__img--right"src="img/img__about1.jpg">
+        <div class="about__img--right">
+            <img src="img/img__about1.jpg">
+        </div>
 
     <div class="section__text">
         <p>Autodidacte depuis ma plus jeune enfance, j’ai
@@ -71,7 +73,7 @@
             C’est un travail d’introspection sur le passé et de
             l’action du temps sur la matière.</p>
     </div>
-    <div class="section__img--left">
+    <div class="about__img--left">
             <img src="img/img__about2.jpg">
         </div>
 </div>
@@ -90,8 +92,8 @@
 <div class="header header--dark">
         <h2>Portfolio</h2>   
 </div>
-<section class="section__ptf section--dark">
-                <div class="container__ptf">
+<section class="ptf__section section--dark">
+                <div class="ptf__container">
                 <div><img src="./img/imgptf101.jpg"></div>
                 <div><img src="./img/imgptf102.jpg"></div>
                 <div><img src="./img/imgptf103.jpg"></div>
@@ -105,7 +107,7 @@
                 <div><img src="./img/imgptf112.jpg"></div>
                 <div><img src="./img/imgptf113.jpg"></div>
                 </div>  
-           <div class="footer--dark">
+           <div class="ptf__footer--dark">
             <a href="https://www.instagram.com/lemoing.g/?hl=fr" target="_blank" class="btn btn--light">voir plus</a> 
            </div>
 </section>
@@ -161,18 +163,18 @@
         <h2>Contact</h2>   
 </div>
 <section class="section  section--dark">
-    <div class="container__contact">
-    <div class="wrapper__contact">
-        <div class="box--info">
+    <div class="contact__container">
+    <div class="contact__wrapper">
+        <div class="contact__box--info">
             <h3>Guillaume Lemoing</h3>
-            <img class="logo__contact" src="img/logo1.png">
+            <img class="contact__logo" src="img/logo1.png">
             <ul>
                 <li>Localisation: Lille</li>
                 <li>+337 56 89 52 14</li>
                 
             </ul>
         </div>
-        <div class="box--contact">
+        <div class="contact__box--email">
             <h3>Contactez moi</h3>
               <form>
                     <p>
@@ -195,12 +197,12 @@
                     <input type="text" name="name">
                     </p>
                                                     
-                    <p class="label--full">
+                    <p class="contact__label--full">
                     <label>Message</label>
                     <textarea name="message" rows="8"></textarea>
                     </p>
                                                             
-                    <p class="label--full">
+                    <p class="contact__label--full">
                     <button>Envoyer </button>
                     </p>
               </form>
